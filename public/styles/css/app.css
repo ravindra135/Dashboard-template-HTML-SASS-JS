@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.head-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 4px 20px;
+  border-bottom: 1px solid #ffd6ff; }
+
+.brand .brand-img {
+  width: 120px;
+  cursor: pointer; }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #b3e2ff;
+  padding: 12px 25px;
+  margin-left: 5rem;
+  border-radius: 25px;
+  text-align: center; }
+  .search-bar i {
+    color: #005e99; }
+  .search-bar input {
+    border: none;
+    outline: none;
+    background: #b3e2ff;
+    font-family: "Noto Serif", serif;
+    color: #005e99;
+    font-size: 18px; }
+
+.header-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto; }
+  .header-btn-group i {
+    color: #008ee6;
+    font-size: 22px; }
+    .header-btn-group i:hover {
+      color: #00588f; }
+  .header-btn-group .h-avatar {
+    width: 42px;
+    border: 2px solid transparent;
+    border-radius: 50%; }
+    .header-btn-group .h-avatar:hover {
+      border: 2px solid #008ee6; }
+
+.header-setting {
+  margin-left: 3rem; }
+  .header-setting i {
+    color: #008ee6;
+    font-size: 22px; }
+    .header-setting i:hover {
+      color: #00588f; }
+
+/*# sourceMappingURL=app.css.map */

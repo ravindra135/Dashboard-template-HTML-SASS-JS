@@ -1,0 +1,63 @@
+.head-container
+    display: flex
+    width: 100%
+    align-items: center
+    padding: 4px 20px
+    border-bottom: 1px solid $add-light-color
+
+.brand .brand-img
+    width: 120px
+    cursor: pointer
+
+.search-bar
+    display: flex
+    align-items: center
+    gap: 20px
+    background-color: lighten($secondary-color, 35%)
+    padding: 12px 25px
+    margin-left: 5rem
+    border-radius: 25px
+    text-align: center
+
+    i
+        color: darken($primary-color, 15%)
+
+    input
+        border: none
+        outline: none
+        background: lighten($secondary-color, 35%)
+        font-family: $ff-noto
+        color: darken($primary-color, 15%)
+        font-size: 18px
+
+.header-btn-group
+    display: flex
+    align-items: center
+    gap: 25px
+    margin-left: auto
+
+    i
+        color: $primary-color
+        font-size: 22px
+
+        &:hover
+            color: darken($primary-color, 17%)
+
+    .h-avatar
+        width: 42px
+        border: 2px solid transparent
+        border-radius: 50%
+
+        &:hover
+            border: 2px solid $primary-color
+
+
+.header-setting
+    margin-left: 3rem
+
+    i
+        color: $primary-color
+        font-size: 22px
+
+        &:hover
+            color: darken($primary-color, 17%)
