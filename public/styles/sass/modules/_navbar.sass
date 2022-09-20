@@ -1,0 +1,85 @@
+aside
+    background: $primary-color
+    width: 18%
+    position: relative
+
+
+    nav
+        margin-top: 25px
+        h3
+            font-family: $ff-lato
+            font-size: 16px
+            color: $white
+            margin-left: 15px
+            margin-bottom: 18px
+
+
+        .nav-item
+            margin-bottom: 8px
+            padding: 8px 15px
+            margin-left: 20px
+
+
+            a
+                display: flex
+                text-decoration: none
+                color: $white
+                font-family: $ff-nunito
+                svg
+                    width: 25px
+
+                span
+                    font-size: 18px
+                    margin-left: 8px
+
+                svg.down,.up
+                    margin-left: auto
+                    margin-right: 15px
+                    width: 18px
+                svg.hidden
+                    display: none
+
+        .nav-item.active
+            background: $white-lilac
+            position: relative
+            border-radius: 15px
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+            a
+                color: $primary-color
+                font-weight: 700
+
+        .nav-item.active:before
+            position: absolute
+            content: ''
+            height: 30px
+            width: 30px
+            right: 0
+            bottom: 100%
+            border-bottom-right-radius: 15px
+            box-shadow: 0 17px 0 $white-lilac
+
+        .nav-item.active:after
+            position: absolute
+            content: ''
+            height: 30px
+            width: 30px
+            right: 0
+            top: 100%
+            border-top-right-radius: 15px
+            box-shadow: 0 -17px 0 $white-lilac   
+
+        .hamber
+            width: 40px
+            height: 40px
+            background: $white-lilac
+            padding: 8px
+            border-radius: 50%
+            position: absolute
+            right: 15px
+            bottom: 15px
+
+            svg
+                color: $primary-color
+            svg.hidden
+                display: none

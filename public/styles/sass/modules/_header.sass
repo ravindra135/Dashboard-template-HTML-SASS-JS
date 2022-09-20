@@ -5,10 +5,13 @@
     background: $white-lilac
     gap: 2rem
     padding: 8px 12px
+    border-bottom: 1.5px solid lighten($secondary-color, 15%)
 
     .brand
         .brand-img
             width: 120px
+            cursor: pointer
+            margin-left: 45px
 
     .search-bar
         display: flex
@@ -17,7 +20,7 @@
         background: lighten($primary-color, 20%)
         padding: 5px 10px
         border-radius: 25px
-        margin-left: 5rem
+        margin-left: 8%
 
         svg
             color: $white
@@ -42,9 +45,11 @@
         margin-left: auto
 
         a
+            text-decoration: none
             svg
                 color: $primary-color
                 width: 25px
+                transition: all .15s ease-in
                 &:hover
                     color: lighten($primary-color, 15%)
 
@@ -52,12 +57,14 @@
                 width: 45px
                 border: 2px solid transparent
                 border-radius: 50%
+                transition: all .23s ease-in
 
                 &:hover
                     border: 2px solid $primary-color
 
     .header-setting
         a
+            text-decoration: none
             svg
                 color: $primary-color
                 width: 25px
@@ -71,3 +78,5 @@
 
                 &:hover
                     color: lighten($primary-color, 15%)
+
+
