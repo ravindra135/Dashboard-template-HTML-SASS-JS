@@ -1,0 +1,104 @@
+.content-container
+    .head
+        padding: 8px 0
+        margin-bottom: 5px
+        h1
+            font-family: $ff-roboto
+            color: $text-black
+
+    .card-block
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        padding: 8px 0
+        width: 100%
+
+        // Different Colors for DIfferent Cards
+        .small-card.bg-color1
+            background: red
+        .small-card.bg-color2
+            background: yellow
+        .small-card.bg-color3
+            background: green
+        .small-card.bg-color4
+            background: blue     
+        
+        // Card SVG IMG and Main Text same color
+        .card-img.color1,
+        .card-text h3.color1
+            color: $primary-color
+        .card-img.color2,
+        .card-text h3.color2
+            color: hsl(221, 98%, 58%)
+        .card-img.color3,
+        .card-text h3.color3
+            color: hsl(162, 98%, 29%)
+        .card-img.color4,
+        .card-text h3.color4
+            color: hsl(339, 95%, 62%)
+
+    .trending-block
+        width: 100%
+        padding: 8px
+        display: grid
+        gap: 1.4rem
+        grid-template-columns: 75% 25%
+        margin-bottom: 8px
+
+        .big-card
+            grid-row: span 2
+
+        .heading
+            font-family: $ff-roboto
+            padding: 8px
+            border-bottom: 1px solid $text-black
+            h2
+                margin-left: 15px
+
+        .product-item
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 15px
+            font-family: $ff-nunito
+            border-bottom: 1px solid $text-black
+        .product-item:last-child
+            border-bottom: unset
+        .product-img
+            img
+                width: 100%
+                max-width: 75px
+                object-fit: cover
+
+        .medium-card
+            display: flex
+            padding: 0 8px
+            position: relative
+            font-family: $ff-nunito
+            grid-column: 2
+            align-items: center
+            
+            .card-img svg
+                position: absolute
+                width: 95px
+                top: 10px
+                right: 28px
+                opacity: 25%
+
+            .card-text
+                h3
+                    margin-top: 18px
+                    font-size: 22px
+                p
+                    margin-top: 5px
+                    font-size: 12px
+
+            .btn,
+            .btn-outline
+                margin-top: 10px
+                a
+                    text-decoration: none
+
+        .grid-row-start
+            grid-row: 2
