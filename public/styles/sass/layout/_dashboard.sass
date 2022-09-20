@@ -63,13 +63,49 @@
             padding: 15px
             font-family: $ff-nunito
             border-bottom: 1px solid $text-black
+        
+            .product-info .seller,
+            .location
+                color: $text-black
+
+            .status
+                padding: 5px 8px
+                background: lighten($primary-color, 20%)
+                border-radius: 7px
+                span
+                    font-weight: 700
+                    font-size: 12px
+            .status.pending
+                background: lighten(red, 20%)
+                span
+                    color: darken(red, 40%)
+            .status.processing
+                background: lighten(#fcc842, 5%)
+                span
+                    color: darken(#fcc842, 40%) 
+
+            .cta
+                svg
+                    width: 28px
+                    color: $primary-color
+
+            .product-img
+                img
+                    width: 100%
+                    max-width: 75px
+                    object-fit: cover
+
         .product-item:last-child
-            border-bottom: unset
-        .product-img
-            img
-                width: 100%
-                max-width: 75px
-                object-fit: cover
+            border-bottom: unset            
+
+        .big-card-footer
+            p
+                font-family: $ff-lato
+                font-size: 12px
+                text-align: center
+                margin: 15px 0
+                span
+                    font-weight: 700
 
         .medium-card
             display: flex
@@ -100,5 +136,6 @@
                 a
                     text-decoration: none
 
+            
         .grid-row-start
             grid-row: 2
