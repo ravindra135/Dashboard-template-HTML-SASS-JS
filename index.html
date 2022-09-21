@@ -49,7 +49,7 @@
         </div>
     </header>
     <div class="main-container">
-        <aside>
+        <aside id="navbar" class="">
             <nav>
                 <h3>Header</h3>
                 <div class="nav-item active">
@@ -61,21 +61,18 @@
                     </a>  
                 </div>
                 <div class="nav-item">
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <a class="drop-parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
                         </svg>  
                         <span>Pages</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="down">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="up hidden">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
                     </a>
-                    <div class="drop-items">
+                    <div id="dropdown1" class="drop-items">
                         <ul>
-                            <li><a href="">Inventory</a></li>
+                            <li><a href="google.com">Inventory</a></li>
                             <li><a href="">Report Errors</a></li>
                             <li><a href="">About</a></li>
                             <li><a href="">Blog</a></li>
@@ -83,17 +80,29 @@
                         </ul>
                     </div>  
                 </div>
+                <div class="nav-item">
+                    <a class="drop-parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                        </svg>                          
+                        <span>Security</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>    
+                    </a>
+                    <div id="dropdown2" class="drop-items">
+                        <ul>
+                            <li><a href="">2FA</a></li>
+                            <li><a href="">Change Password</a></li>
+                            <li><a href="">Update Security Details</a></li>
+                        </ul>
+                    </div>  
+                </div>
                 <div id="navSlider" class="hamber">
                     <!-- Arrow Left -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
+                    <svg id="ns-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
                         <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 010 1.06l-2.47 2.47H21a.75.75 0 010 1.5H4.81l2.47 2.47a.75.75 0 11-1.06 1.06l-3.75-3.75a.75.75 0 010-1.06l3.75-3.75a.75.75 0 011.06 0z" clip-rule="evenodd" />
-                    </svg>
-                    <!-- Arrow Right -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="hidden">
-                        <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z" clip-rule="evenodd" />
-                    </svg>
-                      
-                        
+                    </svg>    
                 </div>
             </nav>
         </aside>
@@ -304,13 +313,14 @@
             </div>
         </main>
     </div>
-    
-    <!-- Scripts -->
-    <script src="./public/js/app.js"></script>
-    
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <!-- Ion Icons -->
     <!-- Usage: <ion-icon name="heart"></ion-icon> -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Scripts -->
+    <script src="./public/js/app.js"></script>
 </body>
 </html>

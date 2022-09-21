@@ -1,7 +1,7 @@
 aside
     background: $primary-color
     width: 18%
-    height: 100%
+    height: auto
     position: relative
 
 
@@ -21,6 +21,7 @@ aside
             margin-left: 20px
 
             a
+                cursor: pointer
                 display: flex
                 text-decoration: none
                 color: $white
@@ -32,22 +33,29 @@ aside
                     font-size: 18px
                     margin-left: 8px
 
-                svg.down,.up
+                svg.arrow
                     margin-left: auto
                     margin-right: 15px
                     width: 18px
-                svg.hidden
-                    display: none
+            
+                svg.arrow.rotate
+                    transform: rotate(90deg)
+                    
+
 
             .drop-items
+                display: none
                 width: auto
                 margin-top: .8rem
                 margin-left: 2.5rem
                 ul
+                    list-style: none
                     li
                         margin-bottom: 10px
                         cursor: pointer
-
+        // .drop-parent
+        //     & > a
+        //         pointer-events: none
         .nav-item.active
             background: $white-lilac
             position: relative
@@ -95,3 +103,56 @@ aside
                 color: $primary-color
             svg.hidden
                 display: none
+
+// After Slide in
+aside.pop-in
+    width: 5%
+
+    nav
+        margin-top: 5rem
+        h3
+            display: none
+
+        .nav-item
+            a
+                svg
+                    z-index: 1
+                span
+                    display: none
+
+                svg#arrow
+                    display: none 
+
+        .hamber
+            svg#ns-left
+                transform: rotate(180deg)
+            .drop-items
+                display: none
+
+// Animation for NavSlider;
+@keyframes popIn
+    0%
+        width: 18%
+    100%
+        width: 5%
+
+@keyframes arrowRight
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(180deg)
+
+@keyframes arrowLeft
+    0%
+        transform: rotate(180deg)
+
+    100%
+        transform: rotate(0deg)
+
+@keyframes popOut
+    0%
+        width: 5%
+    100%
+        width: 18%
+

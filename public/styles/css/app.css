@@ -235,7 +235,7 @@
 aside {
   background: #7D26EA;
   width: 18%;
-  height: 100%;
+  height: auto;
   position: relative; }
   aside nav {
     margin-top: 3rem; }
@@ -250,6 +250,7 @@ aside {
       padding: 8px 15px;
       margin-left: 20px; }
       aside nav .nav-item a {
+        cursor: pointer;
         display: flex;
         text-decoration: none;
         color: #fff;
@@ -259,19 +260,22 @@ aside {
         aside nav .nav-item a span {
           font-size: 18px;
           margin-left: 8px; }
-        aside nav .nav-item a svg.down, aside nav .nav-item a .up {
+        aside nav .nav-item a svg.arrow {
           margin-left: auto;
           margin-right: 15px;
           width: 18px; }
-        aside nav .nav-item a svg.hidden {
-          display: none; }
+        aside nav .nav-item a svg.arrow.rotate {
+          transform: rotate(90deg); }
       aside nav .nav-item .drop-items {
+        display: none;
         width: auto;
         margin-top: 0.8rem;
         margin-left: 2.5rem; }
-        aside nav .nav-item .drop-items ul li {
-          margin-bottom: 10px;
-          cursor: pointer; }
+        aside nav .nav-item .drop-items ul {
+          list-style: none; }
+          aside nav .nav-item .drop-items ul li {
+            margin-bottom: 10px;
+            cursor: pointer; }
     aside nav .nav-item.active {
       background: #fafafa;
       position: relative;
@@ -316,6 +320,43 @@ aside {
       aside nav .hamber svg.hidden {
         display: none; }
 
+aside.pop-in {
+  width: 5%; }
+  aside.pop-in nav {
+    margin-top: 5rem; }
+    aside.pop-in nav h3 {
+      display: none; }
+    aside.pop-in nav .nav-item a svg {
+      z-index: 1; }
+    aside.pop-in nav .nav-item a span {
+      display: none; }
+    aside.pop-in nav .nav-item a svg#arrow {
+      display: none; }
+    aside.pop-in nav .hamber svg#ns-left {
+      transform: rotate(180deg); }
+    aside.pop-in nav .hamber .drop-items {
+      display: none; }
+
+@keyframes popIn {
+  0% {
+    width: 18%; }
+  100% {
+    width: 5%; } }
+@keyframes arrowRight {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(180deg); } }
+@keyframes arrowLeft {
+  0% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(0deg); } }
+@keyframes popOut {
+  0% {
+    width: 5%; }
+  100% {
+    width: 18%; } }
 header.breadcrumb {
   display: flex;
   align-items: center;
