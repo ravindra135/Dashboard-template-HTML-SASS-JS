@@ -1,0 +1,128 @@
+@media screen and ( max-width: 450px )
+    .header-setting
+        display: none !important
+
+    .card-block
+        flex-direction: column
+
+    .trending-block
+        grid-template-columns: 100% !important
+
+        .big-card
+            grid-row: span 1 !important
+            grid-column: span 1 !important
+
+        .medium-card
+            grid-column: 1 !important
+            grid-row: auto
+
+        .grid-row-start
+            grid-row: 3
+            grid-column: 1  !important
+
+@media screen and ( max-width: 600px )
+    aside
+        max-width: 40% !important
+        left: -40% !important
+    aside.active
+        left: 0% !important
+
+@media screen and ( max-width: 820px )
+    .search-bar
+        display: none !important
+
+    .trending-block
+        grid-template-columns: 50% 50% !important
+
+        .big-card
+            grid-row: span 1 !important
+            grid-column: span 2 !important
+
+        .medium-card
+            grid-column: 1 !important
+            grid-row: 2 !important
+
+        .grid-row-start
+            grid-row: 2 !important
+            grid-column: 2  !important
+@media screen and ( max-width: 1024px )
+
+    body
+        position: relative
+    aside
+        z-index: 2
+        position: fixed
+        width: 100%
+        max-width: 30%
+        top: 0
+        bottom: 0
+        left: -30%
+        height: auto
+        max-height: 100%
+        background: lighten($grey, 15%)
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px   
+        nav
+            z-index: 3
+            display: block
+            width: 100%
+            margin-top: unset
+            padding: 15px 8px
+            h3
+
+                color: $black
+            .nav-item
+                a
+                    color: $black
+
+            .nav-item.active
+                background: unset
+                border-radius: unset
+                a
+                    color: $primary-color
+                    font-weight: 700
+
+            .nav-item.active:before
+                display: none
+
+            .nav-item.active:after
+                display: none
+
+            .hamber
+                display: none
+    
+    aside.active
+        left: 0
+
+    @keyframes mobNavA
+        0%
+            left: -30%
+        100%
+            left: 0
+
+    @keyframes mobNavC
+        0%
+            left: 0
+        100%
+            left: -30%
+
+    .mob-btns
+        z-index: 10
+        display: block
+        position: fixed
+        bottom: 20px
+        right: 20px
+        .mob-nav,
+        .mob-scroll
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: 15px
+            width: 35px
+            height: 35px
+            background: $white
+            border-radius: 50%
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            cursor: pointer
+            svg
+                width: 24px
+                color: $primary-color

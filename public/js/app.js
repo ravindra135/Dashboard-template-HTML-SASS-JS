@@ -6,6 +6,27 @@ const nsLeft = document.getElementById('ns-left');
 const navItem = document.querySelectorAll('.nav-item');
 const navDropItem = document.querySelectorAll('.drop-parent');
 
+const mobNavBtn = document.getElementById('mobNavBtn')
+const mobScrollTop = document.getElementById('mobScrollTop')
+
+
+mobNavBtn.addEventListener('click', toggleMobNav)
+mobScrollTop.addEventListener('click', scrollToTop)
+
+function toggleMobNav() {
+    if(navBar.classList.contains('active')) {
+        navBar.style.animation = 'mobNavC .45s ease-in'
+        navBar.classList.toggle('active')
+    } else {
+        navBar.style.animation = 'mobNavA .45s ease-in'
+        navBar.classList.toggle('active')
+    }
+}
+
+function scrollToTop() {
+    $(window).scrollTop(0);
+}
+
 // Drop Items;
 $(document).ready(function() {
     $('.drop-parent').click(function() {
