@@ -330,7 +330,7 @@ aside.pop-in {
       z-index: 1; }
     aside.pop-in nav .nav-item a span {
       display: none; }
-    aside.pop-in nav .nav-item a svg#arrow {
+    aside.pop-in nav .nav-item a svg.arrow {
       display: none; }
     aside.pop-in nav .hamber svg#ns-left {
       transform: rotate(180deg); }
