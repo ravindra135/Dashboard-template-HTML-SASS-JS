@@ -2,7 +2,8 @@
     width: 100%
     border-radius: 7px
     text-align: center
-    padding: 5px
+    padding: 8px 5px
+    transition: all .23s ease
 
 .btn-outline
     width: 100%
@@ -10,29 +11,39 @@
     text-align: center
     background: transparent
     border: 1px solid transparent
-    padding: 5px
-
+    padding: 8px 5px
+    transition: all .23s ease
 
 .danger
-    color: #000
     background: #f70f22
-
+    border: 2px solid transparent
+    &:hover
+        background: transparent
+        border: 2px solid #f70f22
 .success
-    color: #000
     background: #05fc43
-
+    border: 2px solid transparent
+    &:hover
+        background: transparent
+        border: 2px solid #05fc43
 .warning
-    color: #000
     background: #fcf119
+    border: 2px solid transparent
+    &:hover
+        background: transparent
+        border: 2px solid #fcf119
 
 .danger-outline
-    color: #f70f22
     border: 1px solid #f70f22
+    &:hover
+        background: #f70f22
 
 .success-outline
-    color: #05fc43
     border: 1px solid #05fc43
+    &:hover
+        background: #05fc43
 
 .warning-outline
-    color: #fcf119
     border: 1px solid #fcf119
+    &:hover
+        background: #fcf119

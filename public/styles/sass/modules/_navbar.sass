@@ -6,7 +6,7 @@ aside
 
 
     nav
-        margin-top: 25px
+        margin-top: 3rem
         h3
             font-family: $ff-lato
             font-size: 16px
@@ -19,7 +19,6 @@ aside
             margin-bottom: 8px
             padding: 8px 15px
             margin-left: 20px
-
 
             a
                 display: flex
@@ -40,6 +39,15 @@ aside
                 svg.hidden
                     display: none
 
+            .drop-items
+                width: auto
+                margin-top: .8rem
+                margin-left: 2.5rem
+                ul
+                    li
+                        margin-bottom: 10px
+                        cursor: pointer
+
         .nav-item.active
             background: $white-lilac
             position: relative
@@ -49,7 +57,7 @@ aside
             a
                 color: $primary-color
                 font-weight: 700
-
+            
         .nav-item.active:before
             position: absolute
             content: ''
@@ -77,8 +85,11 @@ aside
             padding: 8px
             border-radius: 50%
             position: absolute
-            right: 15px
-            bottom: 15px
+            right: -15px
+            top: 15px
+            border: 2px solid $primary-color
+            cursor: pointer
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px
 
             svg
                 color: $primary-color
